@@ -1,7 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
-
-const url =
-  'mongodb+srv://todoUser:VSTj7mabY599RTgl@cluster0.mvkrs.mongodb.net/';
+require('dotenv').config();
+const url = process.env.ATLAS_STRING;
 const dbname = "shop";
 const createProduct = async (req, res, next) => {
   const newProduct = {
